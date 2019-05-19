@@ -5,9 +5,13 @@ import ReactDOM from 'react-dom';
 import CoordinatesButton from './components/CoordinatesButton';
 import DelayedButton from './components/DelayedButton';
 
+//a handler function for when the CoordinatesButton component btn is clicked
+const handleClickCoordinates = (coordinates) => console.log(coordinates);
+
+
 ReactDOM.render(
   <div>
-    <CoordinatesButton onReceiveCoordinates={ mouseCoordinates => console.log(mouseCoordinates) } />
+    <CoordinatesButton onReceiveCoordinates={ handleClickCoordinates } />
     <DelayedButton onDelayedClick={ event => console.log(event) } delay={1500} />
   </div>,
   document.getElementById('global')
